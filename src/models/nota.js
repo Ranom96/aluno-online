@@ -15,7 +15,16 @@ class Nota {
     }
 
     mediaCA() {
-        return "SS";
+        const media = (this.a1 + this.a2 + this.a3) / 3;
+        if (media >= 7.0) {
+            return "SS";
+        } else if (media >= 5.0) {
+            return "MS";
+        } else if (media >= 3.0) {
+            return "MM";
+        } else {
+            return "MI";
+        }
     }
 }
 
