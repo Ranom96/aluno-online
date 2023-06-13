@@ -15,15 +15,23 @@ class Nota {
     }
 
     mediaCA() {
-        const media = (this.a1 + this.a2 + this.a3) / 3;
-        if (media >= 9.0) {
-            return "SS";
-        } else if (media >= 7.0) {
-            return "MS";
-        } else if (media >= 5.0) {
-            return "MM";
-        } else {
-            return "MI";
+        if(this.mediaFinal() >= 9 && this.mediaFinal() <= 10) {
+            return "SS"
+        }
+        else if(this.mediaFinal() >= 7 && this.mediaFinal() < 9) {
+            return "MS"
+        }
+        else if(this.mediaFinal() >= 5 && this.mediaFinal() < 7) {
+            return "MM"
+        }
+        else if(this.mediaFinal() >= 3 && this.mediaFinal() < 5) {
+            return "MI"
+        }
+        else if(this.mediaFinal() >= 0.1 && this.mediaFinal() < 3) {
+            return "II"
+        }
+        else if(this.mediaFinal() == 0) {
+            return "SR"
         }
     }
 }
